@@ -45,3 +45,12 @@ function greetUser(userName) {
 }
 
 console.log(greetUser("전지연"));
+
+// 2. 원가 계산
+// 판매가를 입력 받아 원가를 계산하는 함수를 작성합니다.
+const calculateOriginalPrice = function (priceWithTax) {
+  const taxRate = 0.033;
+  return priceWithTax / (1 + taxRate);
+};
+
+console.log(calculateOriginalPrice(15_000));
