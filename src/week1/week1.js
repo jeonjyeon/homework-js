@@ -54,3 +54,16 @@ const calculateOriginalPrice = function (priceWithTax) {
 };
 
 console.log(calculateOriginalPrice(15_000));
+
+// 3. 주류 판매 가능 여부
+// 신분증의 나이를 확인해 주류 구매 가능 여부를 반환하는 함수를 작성합니다.
+// 19세 이상 주류 구매가 가능합니다.
+const registrationCard = {
+  name: "전지연",
+  age: 24,
+  gender: "여",
+};
+
+const canSellAlcohol = (registrationCard) => registrationCard.age >= 19;
+
+console.log(canSellAlcohol(registrationCard));
