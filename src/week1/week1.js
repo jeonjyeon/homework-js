@@ -67,3 +67,13 @@ const registrationCard = {
 const canSellAlcohol = (registrationCard) => registrationCard.age >= 19;
 
 console.log(canSellAlcohol(registrationCard));
+
+// 4. 할인가 계산
+// 판매가와 할인 비율(%)을 입력 받아, 할인가를 반환하는 함수를 작성합니다.
+// [예] 판매가가 18,700원이고, 할인율이 20%인 경우 계산된 할인가는 14,960원입니다.
+
+const getDiscountedPrice = function (originalPrice, discountPercent) {
+  return originalPrice * (1 - discountPercent / 100);
+};
+
+console.log(getDiscountedPrice(18_700, 20));
