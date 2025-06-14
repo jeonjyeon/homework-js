@@ -1,0 +1,11 @@
+export const htmlWhitespaceSensitivity = "css";
+export const bracketSameLine = false;
+export const bracketSpacing = true;
+export const printWidth = 500;
+export const proseWrap = "preserve";
+export const quoteProps = "as-needed";
+export const semi = true;
+export const singleQuote = true;
+export const tabWidth = 2;
+export const trailingComma = "es5";
+export const useTabs = false;
