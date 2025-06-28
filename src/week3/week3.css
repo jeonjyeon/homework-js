@@ -1,17 +1,28 @@
+/* ---------------------------------------------------------------------- */
+/* custom property */
+/* ---------------------------------------------------------------------- */
 :root {
   --white: #fff;
   --black: #000;
-  --light-gray: #f3f3f3;
+  --gray-100: #f7f7f7;
+  --gray-200: #f3f3f3;
+  --gray-300: #eee;
 
   --space-8: 8px;
+  --space-10: 10px;
   --space-12: 12px;
   --space-14: 14px;
   --space-16: 16px;
+  --space-20: 20px;
 
   --radius-50: 50px;
+
+  --header-border-bottom: 1px;
 }
 
+/* ---------------------------------------------------------------------- */
 /* button 및 a 태그 스타일 초기화 */
+/* ---------------------------------------------------------------------- */
 button {
   border-style: none;
   margin: 0px;
@@ -23,14 +34,16 @@ a {
   color: var(--black);
 }
 
+/* ---------------------------------------------------------------------- */
 /* header 스타일링 */
+/* ---------------------------------------------------------------------- */
 .kakao-ir-header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
   padding-inline: var(--space-14);
-  padding-block: 23px;
+  padding-block: 22px;
 
   position: sticky;
   top: 0px;
@@ -38,6 +51,15 @@ a {
   right: 0px;
 
   background-color: var(--white);
+
+  .btn-main-menu {
+    .hamburger {
+      display: block;
+    }
+    .close {
+      display: none;
+    }
+  }
 }
 
 .link-kakao-ir,
@@ -56,12 +78,15 @@ a {
   padding-inline: var(--space-14);
 }
 
+/* ---------------------------------------------------------------------- */
 /* 카카오 메인 투자정보 안내 content wrapper 스타일링 */
+/* ---------------------------------------------------------------------- */
 .content-wrapper {
   display: flex;
   flex-flow: column nowrap;
   row-gap: var(--space-12);
 }
+
 .content-wrapper > .title {
   font-size: 26px;
   line-height: 1.38;
@@ -87,11 +112,115 @@ a {
 
   font-size: 15px;
   color: var(--black);
-  background-color: var(--light-gray);
+  background-color: var(--gray-200);
 }
 
 .more-arrow {
   background-color: var(--black);
   margin-inline-start: var(--space-8);
   border-radius: var(--radius-50);
+}
+
+/* ---------------------------------------------------------------------- */
+/* off canvas 스타일링 */
+/* ---------------------------------------------------------------------- */
+.main-menu {
+  --header-block-size: 72px;
+
+  display: none;
+  position: fixed;
+  top: calc(var(--header-block-size) + var(--header-border-bottom));
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* 다른 요소 아래 깔리는 것을 방지하기 위한 코드 */
+  overflow-y: scroll;
+
+  padding-inline: var(--space-20);
+  background-color: white;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  padding-block-start: 18px;
+
+  & > li > a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    inline-size: 100%;
+    padding-block: var(--space-10);
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+}
+
+/* body에 is-menu-open 클래스 적용하여 off canvas 스타일링 한 번에 처리하도록 설계 */
+.menu-open {
+  overflow: hidden;
+
+  .kakao-ir-header {
+    border-block-end: var(--header-border-bottom) solid var(--gray-300);
+
+    .btn-main-menu {
+      .hamburger {
+        display: none;
+      }
+      .close {
+        display: block;
+      }
+    }
+  }
+
+  .main-menu {
+    display: flex;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* accordion 스타일링 */
+/* ---------------------------------------------------------------------- */
+.accordion-btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  inline-size: 100%;
+
+  padding-block: var(--space-10);
+  color: var(--black);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.accordion-contents {
+  display: none;
+  flex-flow: column nowrap;
+  margin-block: 4px 10px;
+  padding: 16px 24px;
+  border-radius: var(--space-16);
+
+  background-color: var(--gray-100);
+  color: var(--black);
+
+  li {
+    padding-block: var(--space-8);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* accordion은 .menu 클래스가 있는 li에 클래스 추가 제거로 제어  */
+.accordion-open {
+  .accordion-contents {
+    display: flex;
+  }
 }

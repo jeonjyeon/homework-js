@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/images/javascript.ico" />
     <title>카카오 투자정보 클론코딩</title>
+    <link rel="icon" href="/images/javascript.ico" />
     <link
       rel="stylesheet"
+      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
     />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./week3.css" />
     <script src="./week3.js"></script>
   </head>
-  <body>
+  <body class="menu-open">
     <header class="kakao-ir-header">
       <h1 class="sr-only">카카오 투자정보</h1>
       <a class="link-kakao-ir" href="https://www.kakaocorp.com/ir/main?lang=ko"
@@ -63,12 +64,12 @@
         </svg>
       </a>
       <div class="header-btn-wrapper">
-        <button type="button">
+        <button class="btn-en-page" type="button">
           <span class="sr-only">영문 페이지로 이동</span>
           <svg
-            width="29"
-            height="29"
-            viewBox="0 0 29 29"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -111,12 +112,13 @@
             </defs>
           </svg>
         </button>
-        <button type="button">
+        <button class="btn-main-menu" type="button">
           <span class="sr-only">메인 메뉴 열기</span>
           <svg
-            width="29"
-            height="29"
-            viewBox="0 0 29 29"
+            class="hamburger"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -184,8 +186,219 @@
               </clipPath>
             </defs>
           </svg>
+          <svg
+            class="close"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.4898 21.512L6.57947 5.51342C6.29769 5.23007 5.8299 5.21866 5.53463 5.48792C5.23936 5.75718 5.22843 6.20516 5.51021 6.4885L21.4205 22.487C21.7023 22.7704 22.1701 22.7818 22.4653 22.5125C22.7606 22.2433 22.7715 21.7953 22.4898 21.512Z"
+              fill="black"
+            />
+            <path
+              d="M6.57942 22.4867L22.4897 6.48813C22.7715 6.20478 22.7606 5.75681 22.4653 5.48754C22.17 5.21828 21.7022 5.2297 21.4205 5.51304L5.51016 21.5116C5.22838 21.7949 5.23931 22.2429 5.53458 22.5122C5.82984 22.7814 6.29763 22.77 6.57942 22.4867Z"
+              fill="black"
+            />
+          </svg>
         </button>
       </div>
+      <nav class="main-menu">
+        <ul class="menu-wrapper">
+          <li class="menu accordion-open">
+            <button class="accordion-btn" type="button">
+              기업지배구조<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">주주구성</a></li>
+              <li><a href="#">주주총회</a></li>
+              <li><a href="#">이사회</a></li>
+              <li><a href="#">규정</a></li>
+              <li><a href="#">지배구조</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <button class="accordion-btn" type="button">
+              주식정보<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">주가정보</a></li>
+              <li><a href="#">주주환원</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <button class="accordion-btn" type="button">
+              재무정보<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">연결재무제표</a></li>
+              <li><a href="#">별도재무제표</a></li>
+              <li><a href="#">신용등급</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <button class="accordion-btn" type="button">
+              IR 자료<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">CEO 메시지</a></li>
+              <li><a href="#">실적발표</a></li>
+              <li><a href="#">IR 행사</a></li>
+              <li><a href="#">IR 미팅예약</a></li>
+              <li><a href="#">증권사커버리지</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <button class="accordion-btn" type="button">
+              공시정보<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">사업보고서</a></li>
+              <li><a href="#">감사 및 검토보고서</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <button class="accordion-btn" type="button">
+              공고<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4L7.07595 10L13 4"
+                  stroke="#999999"
+                  stroke-width="0.964286"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+            </button>
+            <ul class="accordion-contents">
+              <li><a href="#">공고사항</a></li>
+              <li><a href="#">주주제안권</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <a
+              href="https://www.kakaocorp.com/page/responsible/esg?lang=KOR"
+              target="_blank"
+              rel="noreferrer noopener"
+              >ESG<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.58301 3H11.1895V11.6065"
+                  stroke="#999999"
+                  stroke-width="1.17"
+                />
+                <path
+                  d="M11.1901 3L2 12.1901"
+                  stroke="#999999"
+                  stroke-width="1.17"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="menu">
+            <a
+              href="https://www.kakaocorp.com/page/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >kakao<svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.58301 3H11.1895V11.6065"
+                  stroke="#999999"
+                  stroke-width="1.17"
+                />
+                <path
+                  d="M11.1901 3L2 12.1901"
+                  stroke="#999999"
+                  stroke-width="1.17"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="kakao-ir-main">
       <h2 class="sr-only">메인 페이지</h2>
