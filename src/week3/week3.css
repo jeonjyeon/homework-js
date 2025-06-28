@@ -1,0 +1,97 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --light-gray: #f3f3f3;
+
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+
+  --radius-50: 50px;
+}
+
+/* button 및 a 태그 스타일 초기화 */
+button {
+  border-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* header 스타일링 */
+.kakao-ir-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  padding-inline: var(--space-14);
+  padding-block: 23px;
+
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  background-color: var(--white);
+}
+
+.link-kakao-ir,
+.header-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-btn-wrapper {
+  display: flex;
+  column-gap: var(--space-12);
+}
+
+/* 메인 페이지 스타일링 */
+.kakao-ir-main {
+  padding-inline: var(--space-14);
+}
+
+/* 카카오 메인 투자정보 안내 content wrapper 스타일링 */
+.content-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--space-12);
+}
+.content-wrapper > .title {
+  font-size: 26px;
+  line-height: 1.38;
+  color: var(--black);
+  padding-inline-start: var(--space-14);
+}
+
+.bg-thumbnail img {
+  width: 100%;
+  max-block-size: 198px;
+  border-radius: var(--space-16);
+  object-fit: cover;
+}
+
+.link-find-out-more {
+  display: flex;
+  inline-size: 100%;
+  block-size: 48px;
+  border-radius: var(--radius-50);
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 15px;
+  color: var(--black);
+  background-color: var(--light-gray);
+}
+
+.more-arrow {
+  background-color: var(--black);
+  margin-inline-start: var(--space-8);
+  border-radius: var(--radius-50);
+}
