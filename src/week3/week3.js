@@ -1,8 +1,13 @@
 {
   const body = document.body;
   const header = document.querySelector("header");
+  const btnEnPage = header.querySelector(".btn-en-page");
   const btnMainMenu = header.querySelector(".btn-main-menu");
   const menuWrapper = header.querySelector(".menu-wrapper");
+
+  btnEnPage.addEventListener("click", () => {
+    window.location.href = "https://www.kakaocorp.com/ir/main?lang=en";
+  });
 
   btnMainMenu.addEventListener("click", () => {
     body.classList.toggle("menu-open");
