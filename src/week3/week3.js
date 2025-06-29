@@ -32,4 +32,19 @@
     // 토글 (이미 열려 있던 메뉴면 닫고, 아니면 열기)
     targetMenu.classList.toggle("accordion-open");
   });
+
+  // Escape 키로 아코디언 또는 메뉴 닫기
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+
+    const currentOpen = menuWrapper.querySelector(".accordion-open");
+
+    if (currentOpen) {
+      // 아코디언이 열려있으면, 아코디언만 닫기
+      currentOpen.classList.remove("accordion-open");
+    } else if (body.classList.contains("menu-open")) {
+      // 아코디언이 닫혀있고,  메인 메뉴가 열려있으면 메인 메뉴 닫기
+      body.classList.remove("menu-open");
+    }
+  });
 }
