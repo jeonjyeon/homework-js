@@ -6,6 +6,11 @@
   --dark-blue: #192e76;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -99,6 +104,11 @@ a {
   background-position: center;
 
   align-content: center;
+}
+
+.main-title {
+  align-self: center;
+  max-inline-size: 600px;
 }
 
 .subtitle {
