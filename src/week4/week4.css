@@ -1,0 +1,184 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --green: #0fb376;
+  --blue: #2b56ff;
+  --dark-blue: #192e76;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+
+.container {
+  min-height: 100vh;
+  background-image: url("./assets/images/bg-sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* -------------------------------------------------- */
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.game-start {
+  inline-size: 148px;
+  block-size: 48px;
+  text-align: center;
+  align-content: center;
+
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 20px;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--green);
+  }
+}
+
+/* -------------------------------------------------- */
+
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 80px); /* top-container 높이에 맞게 보정 */
+  gap: 3rem;
+  padding-inline: 1rem;
+}
+
+/* 캐릭터 이미지 스타일링 */
+.character-wrapper {
+  flex: 1;
+  max-inline-size: 670px;
+  background-image: image-set(
+    url("./assets/images/img-nao.avif") type("image/avif") 1x,
+    url("./assets/images/img-nao@2x.avif") type("image/avif") 2x,
+    url("./assets/images/img-nao.webp") type("image/webp") 1x,
+    url("./assets/images/img-nao@2x.webp") type("image/webp") 2x,
+    url("./assets/images/img-nao.png") type("image/png") 1x,
+    url("./assets/images/img-nao@2x.png") type("image/png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.content-area {
+  flex: 1;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+
+  text-align: center;
+}
+
+.event-badge {
+  block-size: 70px;
+  background-image: image-set(
+    url("./assets/images/bg-text.avif") type("image/avif") 1x,
+    url("./assets/images/bg-text@2x.avif") type("image/avif") 2x,
+    url("./assets/images/bg-text.webp") type("image/webp") 1x,
+    url("./assets/images/bg-text@2x.webp") type("image/webp") 2x,
+    url("./assets/images/bg-text.png") type("image/png") 1x,
+    url("./assets/images/bg-text@2x.png") type("image/png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  align-content: center;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+/* -------------------------------------------------- */
+
+.cta-link {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  inline-size: 320px;
+  block-size: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 50px;
+  z-index: 1000; /* 다른 요소 위에 오게 */
+}
+
+.cta-link img {
+  inline-size: 22px;
+  aspect-ratio: 1;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: var(--dark-blue);
+}
+
+/* -------------------------------------------------- */
+/* 반응형 */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-block-start: 25px;
+    padding-block-end: 50px;
+  }
+
+  .character-wrapper {
+    order: 2;
+  }
+
+  .content-area {
+    order: 1;
+  }
+
+  .character-wrapper {
+    width: 80%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .event-badge {
+    font-size: 14px;
+    block-size: auto;
+    padding: 0.5rem;
+  }
+
+  .main-title {
+    max-inline-size: 500px;
+  }
+
+  .cta-link {
+    inline-size: 90%;
+    font-size: 20px;
+    bottom: 1rem;
+  }
+}
