@@ -8,7 +8,6 @@
       name="description"
       content="마비노기 모바일의 론칭 100일 기념 이벤트 페이지를 수정하여 애니메이션 적용"
     />
-
     <link rel="icon" href="./assets/mabinogimoblie.ico" />
     <link
       rel="stylesheet"
@@ -17,7 +16,72 @@
     />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./week4.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/GSDevTools.min.js"></script>
     <script src="./week4.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="top-container">
+        <a class="go-to-main-page" href="https://mabinogimobile.nexon.com/Main">
+          <img
+            src="./assets/icons/icon-logo.svg"
+            alt="마비노기 모바일 홈페이지로 이동"
+          />
+        </a>
+        <a class="game-start" href="/"
+          >Game Start
+          <span class="sr-only">Nexon Game Manager 애플리케이션 열기</span>
+        </a>
+      </div>
+      <div class="main-container">
+        <div class="character-wrapper"></div>
+
+        <div class="content-area">
+          <strong class="event-badge">
+            마비노기 모바일 론칭 100일 기념 감사 이벤트
+          </strong>
+
+          <div class="subtitle">모험가 여러분이 만들어 주신</div>
+
+          <picture class="main-title">
+            <source
+              srcset="
+                ./assets/images/img-text.avif    1x,
+                ./assets/images/img-text@2x.avif 2x
+              "
+              type="image/avif"
+            />
+            <source
+              srcset="
+                ./assets/images/img-text.webp    1x,
+                ./assets/images/img-text@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="./assets/images/img-text.png"
+              srcset="
+                ./assets/images/img-text.png    1x,
+                ./assets/images/img-text@2x.png 2x
+              "
+              alt=""
+            />
+          </picture>
+
+          <p class="description">
+            모험가 여러분이 만들어 주신 100일간의 소중한 이야기들<br />
+            그 감사의 마음을 담아 준비한 100일 기념 이벤트를 지금 바로 확인해
+            보세요.
+          </p>
+
+          <a
+            class="cta-link"
+            href="https://mabinogimobile.nexon.com/Support/DownLoad"
+            >지금 다운로드하고 선물 받아가세요!</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
