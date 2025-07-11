@@ -10,7 +10,7 @@
     z-index: -1;
     inset: 0;
     transition: opacity 0.15s ease-out;
-    box-shadow: 0 0 0 2px var(--gray-100), 
+    box-shadow: 0 0 0 2px var(--blue-gray-100), 
                 0 0 30px 0 rgba(0 0 0 / 0.3);
     border-radius: inherit;
   }
@@ -32,8 +32,8 @@
   border-top-right-radius: inherit;
   border-top-left-radius: inherit;
   padding: 0.75rem 1rem;
-  background-color: var(--gray-900);
-  color: var(--gray-50);
+  background-color: var(--blue-gray-800);
+  color: var(--blue-gray-50);
   font-size: calc(1rem * 1.2 * 1.2);
   text-align: right;
 }
@@ -50,7 +50,7 @@
     "zero decimal clear equal";
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
-  background-color: var(--gray-200);
+  background-color: var(--blue-gray-200);
 
   [data-key="0"] { grid-area: zero; }
   [data-key="1"] { grid-area: one; }
@@ -68,20 +68,20 @@
   button {
     user-select: none;
     position: relative;
-    width: 4rem;
+    width: 4.5rem;
     min-height: 3rem;
     border: 0;
     padding: 0;
-    background-color: var(--gray-50);
+    background-color: var(--blue-gray-50);
 
     &:hover {
-      background-color: var(--gray-100);
+      background-color: var(--blue-gray-100);
     }
     
     &:focus,
     &:active {
       z-index: 1;
-      background-color: var(--gray-100);
+      background-color: var(--blue-gray-100);
     }
   }
 
@@ -91,23 +91,23 @@
 
   [data-key="equal"] {
     grid-area: equal;
-    background-color: var(--orange-400);
+    background-color: var(--yellow-400);
     border-bottom-right-radius: inherit;
     
     &:hover,
     &:focus {
       grid-area: equal;
-      background-color: var(--orange-500);
+      background-color: var(--yellow-500);
     }
   }
 
   [data-button-type="operator"] {
-    background-color: var(--gray-100);
+    background-color: var(--blue-gray-100);
 
     &.is-pressed,
     &:hover,
     &:focus {
-      background-color: var(--gray-200);
+      background-color: var(--blue-gray-200);
     }
   }
 
