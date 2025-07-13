@@ -9,3 +9,4 @@
 | 1주차 | [변수, 상수, 함수](./src/week1/week1.md)                                         |
 | 3주차 | [카카오 투자정보의 Off Canvas, Accordion 클론 코딩](./src/week3/week3.md)        |
 | 4주차 | [마비노기 모바일 이벤트 페이지를 활용하여 애니메이션 적용](./src/week4/week4.md) |
+| 5주차 | [계산기 구현](./src/week5/week5.md)                                              |
