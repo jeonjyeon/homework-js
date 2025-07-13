@@ -57,14 +57,29 @@
     }
     // 3. 소수점 키를 클릭한다.
     if (buttonType === "decimal") {
-      calculatorDisplay.textContent = result + ".";
+      // 소수점 중복 입력 방지
+      if (!result.includes(".")) {
+        calculatorDisplay.textContent = result + ".";
+      }
     }
     // 4. 등호(`=`) 키를 클릭한다.
     if (buttonType === "equal") {
+      const previousButtonType = calculator.dataset.previousButtonType;
+
+      // 연산자만 누르고 피연산자 없이 = 누른 경우
+      if (previousButtonType === "operator") {
+        return alert("완전한 수식을 입력해 주세요!");
+      }
+
       let firstValue = Number(calculator.dataset.firstValue);
       let operator = calculator.dataset.operator;
       let secondValue = Number(result);
       calculator.dataset.lastValue = secondValue;
+
+      // 0으로 나누는 경우
+      if (operator === "divide" && secondValue === 0) {
+        return alert("0으로 나눌 수 없습니다.");
+      }
 
       if (!isNaN(firstValue) && !isNaN(secondValue)) {
         switch (operator) {
